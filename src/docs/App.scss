@@ -1,0 +1,31 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body, #content, .app {
+  height: 100%;
+}
+
+.app {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.input {
+  flex: 1 1 50%;
+
+  textarea {
+    height: 100%;
+    width: 100%;
+    font-size: 1rem;
+    font-family: monospace;
+  }
+}
+
+.controls {
+  flex: 0 0 auto;
+}
+
+.output {
+  flex: 1 1 50%;
+}
