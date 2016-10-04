@@ -1,12 +1,12 @@
 import List from '../dataStructures/List';
-import log from '../utils/log';
+import Context from '../utils/Context';
 
 window.List = List;
 
-const context = {};
+const context = Context();
 
-Object.observe(context, () => {
-  console.log(arguments);
-});
+console.log(context);
 
 eval("context.l1 = new List(1, 2);");
+
+console.log(context);
