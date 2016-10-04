@@ -1,12 +1,15 @@
-import List from '../dataStructures/List';
-import Context from '../utils/Context';
+import React from 'react';
+import { render } from 'react-dom';
+import { Provider } from 'react-redux';
 
-window.List = List;
+import App from './App';
+import createStore from '../redux/store';
 
-const context = Context();
+const store = createStore();
 
-console.log(context);
-
-eval("context.l1 = new List(1, 2);");
-
-console.log(context);
+render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById('content')
+);
